@@ -56,13 +56,17 @@ body {
 }
 
 /* Make MainPicture1 image circular */
+.circular-image-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin: 10% auto 0 auto; /* Center the container and add top margin */
+}
+
 .circular-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
-    margin: 10% auto 0 auto; /* Center the image horizontally and add top margin */
 }
 
 .MainPitcure1Container p {
@@ -192,6 +196,7 @@ body {
     display: flex;
     justify-content: flex-end; /* Align links to the right */
     padding-right: 20px; /* Add some right padding */
+    flex-wrap: wrap; /* Allow the items to wrap to the next line if necessary */
 }
 
 /* Style the links inside BottomBarContainer */
@@ -233,9 +238,10 @@ body {
         text-align: center;
     }
 
-    .Presentation1, .circular-image {
+    .Presentation1, .circular-image-container {
         margin-top: 20px;
         margin-left: 0;
+        width: 100%; /* Ensure full width for flex centering */
     }
 
     .ContactMe {
@@ -248,7 +254,7 @@ body {
     }
 
     .circular-image {
-        margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
+        margin: 0; /* Remove individual margins */
     }
 }
 
@@ -272,7 +278,7 @@ body {
     .circular-image {
         width: 150px;
         height: 150px;
-        margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
+        margin: 0; /* Remove individual margins */
     }
 
     .CV h3 a {
@@ -293,5 +299,16 @@ body {
     .ContactMeContainer {
         width: 100%;
         padding: 5px;
+    }
+
+    /* Ensure the links in BottomBarContainer stay side by side on small screens */
+    .BottomBarContainer {
+        flex-direction: row; /* Ensure horizontal alignment */
+        justify-content: flex-end; /* Align links to the right */
+    }
+
+    .BottomBarContainer a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-left: 10px; /* Adjust spacing between links */
     }
 }
