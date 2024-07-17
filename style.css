@@ -61,7 +61,8 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
+    display: flex;
+    justify-content: center; /* Horizontally center */
     margin: 10% auto 0 auto; /* Center the image horizontally and add top margin */
 }
 
