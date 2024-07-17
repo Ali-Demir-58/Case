@@ -56,17 +56,13 @@ body {
 }
 
 /* Make MainPicture1 image circular */
-.circular-image-container {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    margin: 10% auto 0 auto; /* Center the container and add top margin */
-}
-
 .circular-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
+    margin: 10% auto 0 auto; /* Center the image horizontally and add top margin */
 }
 
 .MainPitcure1Container p {
@@ -237,10 +233,9 @@ body {
         text-align: center;
     }
 
-    .Presentation1, .circular-image-container {
+    .Presentation1, .circular-image {
         margin-top: 20px;
         margin-left: 0;
-        width: 100%; /* Ensure full width for flex centering */
     }
 
     .ContactMe {
@@ -253,7 +248,7 @@ body {
     }
 
     .circular-image {
-        margin: 0; /* Remove individual margins */
+        margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
     }
 }
 
@@ -277,7 +272,7 @@ body {
     .circular-image {
         width: 150px;
         height: 150px;
-        margin: 0; /* Remove individual margins */
+        margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
     }
 
     .CV h3 a {
