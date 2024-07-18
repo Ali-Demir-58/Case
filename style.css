@@ -119,21 +119,31 @@ body {
 
 .AboutContainer h2 {
     padding-left: 15px;
+    font-size: 45px;
 }
 
 .AboutContainer p {
-    margin-top: 40px;
-    font-size: 16px;
-    line-height: 1.5;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: aliceblue;
+    text-align: center;
+    font-size: 24px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-h2, p {
+p {
     text-align: center;
     color: rgb(232, 236, 239);
+    font-size: 24px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(232, 236, 239);
+    font-size: 45px;
 }
 
 input[type=text], select, textarea {
