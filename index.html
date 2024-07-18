@@ -31,7 +31,7 @@
                 <a href="index.html">
                     <i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home
                 </a>
-                <a href="html/Blog1.html">
+                <a href="Blog1.html">
                     <i class="fa-solid fa-blog"></i>&nbsp;&nbsp;Blog
                 </a>
             </div>
@@ -40,9 +40,7 @@
 
     <div class="MainPitcure1">
         <a href="images/MainPitcure1.jpg" data-lightbox="Me" data-title="My Profile">
-            <div class="circular-image-container">
             <img src="images/MainPitcure1.jpg" height="250" class="circular-image">
-            </div>
         </a>
         <div class="MainPitcure1Container">
             <h1>ALİ DEMİR</h1>
@@ -71,23 +69,68 @@
         </div>
     </div>
 
-    <div class="ContactMe">
-        <div class="ContactMeContainer">
-            <h2>CONTACT ME</h2>
-            <form action="mailto:alidemir200258@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
+    <h2> Contact Form </h2>
+    <div class="container">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
         </div>
-    </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Your email..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Country</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="turkey">Turkey</option>
+              <option value="england">England</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="submit" value="Submit" onclick="showMessage()">
+        </div>
+      </div>
+      
+      <p id="message" style="text-align:center; color:green;"></p>
+      
+      <script>
+      function showMessage() {
+          var email = document.getElementById("email").value;
+          document.getElementById("message").innerText = "Message sent to alidemir200258@gmail.com";
+      }
+      </script>
     
     <div class="BottomBar">
         <div class="BottomBarContainer">
