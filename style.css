@@ -294,9 +294,11 @@ input[type=submit]:hover {
     .menu-bar {
         padding: 10px 12px;
     }
+    
 
     .menu-links {
-        padding: 5px;
+        width: 180px; /* Menü kutusunun genişliği */
+        right: 10px; /* Sağ üst köşeye hizalama */
     }
 
     .menu-links a {
