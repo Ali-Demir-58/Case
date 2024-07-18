@@ -35,9 +35,9 @@ body {
     flex-direction: column;
     background-color: #1091cc;
     position: absolute;
-    top: 50px; /* TopBar'ın yüksekliği kadar yukarıya yerleştirin */
-    right: 10px; /* Menü butonunun hemen altına hizalayın */
-    width: 200px;
+    top: 100%; /* TopBar'ın hemen altında */
+    right: 0; /* Menü butonunun hemen altına hizalayın */
+    width: auto; /* Genişliği içeriğe göre otomatik ayarla */
     z-index: 1;
     border-radius: 4px;
     padding: 10px; /* Bağlantılar için biraz iç boşluk ekleyin */
@@ -45,7 +45,7 @@ body {
 
 .menu-links a {
     color: white;
-    padding: 14px 16px;
+    padding: 10px 20px;
     text-decoration: none;
     display: block;
 }
