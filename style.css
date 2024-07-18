@@ -35,18 +35,17 @@ body {
     flex-direction: column;
     background-color: #1091cc;
     position: absolute;
-    top: 100%; /* Adjust the position to be directly below the menu bar */
-    right: 0; /* Align to the right of the menu bar */
-    width: 100%; /* Adjust the width to fit the container */
+    top: 100%; /* Menü butonunun hemen altında */
+    right: 0; /* Menü butonunun hemen altına hizalama */
+    width: 180px; /* Menü kutusunun genişliği */
     z-index: 1;
     border-radius: 4px;
-    padding: 10px; /* Bağlantılar için biraz iç boşluk ekleyin */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    padding: 10px; /* Bağlantılar için iç boşluk */
 }
 
 .menu-links a {
     color: white;
-    padding: 14px 16px;
+    padding: 10px 16px; /* Bağlantılar için iç boşluk ayarla */
     text-decoration: none;
     display: block;
 }
