@@ -7,7 +7,6 @@ body {
     margin: 0; /* Remove default margin */
 }
 
-/* TopBar styles */
 .TopBar {
     background-color: #050a36;
     height: 50px;
@@ -29,10 +28,6 @@ body {
     color: white;
     padding: 14px 16px;
     text-align: center;
-    position: absolute;
-    top: 50%; /* Dikeyde TopBar'ın ortasında */
-    transform: translateY(-50%);
-    right: 10px; /* Sağ üst köşeye yerleştirme */
 }
 
 .menu-links {
@@ -40,8 +35,8 @@ body {
     flex-direction: column;
     background-color: #1091cc;
     position: absolute;
-    top: calc(100% + 10px); /* Menü butonunun hemen altında açılacak */
-    right: 10px; /* Sağ üst köşeye hizalama */
+    top: 100%; /* Menü butonunun hemen altında */
+    right: 0; /* Menü butonunun hemen altına hizalama */
     width: 180px; /* Menü kutusunun genişliği */
     z-index: 1;
     border-radius: 4px;
@@ -280,4 +275,3 @@ body {
         width: 95%;
     }
 }
-
