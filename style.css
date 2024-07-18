@@ -56,17 +56,13 @@ body {
 }
 
 /* Make MainPicture1 image circular */
-.circular-image-container {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    margin: 10% auto 0 auto; /* Center the container and add top margin */
-}
-
 .circular-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
+    margin: 10% auto 0 auto; /* Center the image horizontally and add top margin */
 }
 
 .MainPitcure1Container p {
@@ -132,56 +128,79 @@ body {
     line-height: 1.5;
 }
 
-/* Style for the ContactMe section */
-.ContactMe {
-    padding: 40px 60px;
-    margin-top: 13%;
+* {
+    box-sizing: border-box;
 }
 
-.ContactMeContainer {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.ContactMeContainer h2 {
+h2, p {
     text-align: center;
-    margin-bottom: 20px;
+    color: rgb(232, 236, 239);
 }
 
-.ContactMeContainer form {
-    display: flex;
-    flex-direction: column;
-}
-
-.ContactMeContainer label {
-    margin-bottom: 5px;
-}
-
-.ContactMeContainer input,
-.ContactMeContainer textarea {
-    padding: 10px;
-    margin-bottom: 15px;
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize: vertical;
 }
 
-.ContactMeContainer button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #1fa2ce;
     color: white;
+    padding: 12px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
+    float: right;
 }
 
-.ContactMeContainer button:hover {
-    background-color: #0056b3;
+input[type=submit]:hover {
+    background-color: #247db7;
 }
+
+.container {
+    align-items: center;
+    width: 60%;
+    margin: 0 auto; /* Center the container */
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
 
 /* Style the BottomBar similar to TopBar */
 .BottomBar {
@@ -196,7 +215,6 @@ body {
     display: flex;
     justify-content: flex-end; /* Align links to the right */
     padding-right: 20px; /* Add some right padding */
-    flex-wrap: wrap; /* Allow the items to wrap to the next line if necessary */
 }
 
 /* Style the links inside BottomBarContainer */
@@ -238,10 +256,9 @@ body {
         text-align: center;
     }
 
-    .Presentation1, .circular-image-container {
+    .Presentation1, .circular-image {
         margin-top: 20px;
         margin-left: 0;
-        width: 100%; /* Ensure full width for flex centering */
     }
 
     .ContactMe {
@@ -254,7 +271,7 @@ body {
     }
 
     .circular-image {
-        margin: 0; /* Remove individual margins */
+        margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
     }
 }
 
@@ -278,7 +295,7 @@ body {
     .circular-image {
         width: 150px;
         height: 150px;
-        margin: 0; /* Remove individual margins */
+        margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
     }
 
     .CV h3 a {
@@ -299,16 +316,5 @@ body {
     .ContactMeContainer {
         width: 100%;
         padding: 5px;
-    }
-
-    /* Ensure the links in BottomBarContainer stay side by side on small screens */
-    .BottomBarContainer {
-        flex-direction: row; /* Ensure horizontal alignment */
-        justify-content: flex-end; /* Align links to the right */
-    }
-
-    .BottomBarContainer a {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        margin-left: 10px; /* Adjust spacing between links */
     }
 }
