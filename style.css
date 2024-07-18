@@ -173,7 +173,6 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
-
 .col-25 {
     float: left;
     width: 25%;
@@ -199,8 +198,10 @@ input[type=submit]:hover {
         width: 100%;
         margin-top: 0;
     }
+    .container {
+        width: 90%;
+    }
 }
-
 
 /* Style the BottomBar similar to TopBar */
 .BottomBar {
@@ -273,6 +274,16 @@ input[type=submit]:hover {
     .circular-image {
         margin: 20px auto 0 auto; /* Adjust the margin for smaller screens */
     }
+
+    .BottomBarContainer {
+        flex-direction: row; /* Ensure links are in a row */
+        justify-content: flex-end; /* Align to the right */
+        width: 100%;
+    }
+
+    .BottomBarContainer a {
+        margin: 0 10px; /* Space between links */
+    }
 }
 
 @media (max-width: 480px) {
@@ -309,12 +320,22 @@ input[type=submit]:hover {
     }
 
     .ContactMe {
-        padding: 10px;
+        padding: 2px;
         margin-top: 10%;
     }
 
     .ContactMeContainer {
+        width: 60%;
+        padding: 1px;
+    }
+
+    .BottomBarContainer {
+        flex-direction: row; /* Ensure links are in a row */
+        justify-content: flex-end; /* Align to the right */
         width: 100%;
-        padding: 5px;
+    }
+
+    .BottomBarContainer a {
+        margin: 0 10px; /* Space between links */
     }
 }
