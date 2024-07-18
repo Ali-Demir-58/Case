@@ -195,12 +195,13 @@ body {
     }
 
     .BottomBarContainer {
-        justify-content: center;
-        padding: 0;
+        flex-direction: row; /* Ensure links are in a row */
+        justify-content: flex-end; /* Align to the right */
+        width: 100%;
     }
 
     .BottomBarContainer a {
-        margin: 10px 0;
+        margin: 0 10px; /* Space between links */
     }
 }
 
@@ -245,12 +246,13 @@ body {
     }
 
     .BottomBarContainer {
-        justify-content: center;
-        padding: 0;
+        flex-direction: row; /* Ensure links are in a row */
+        justify-content: flex-end; /* Align to the right */
+        width: 100%;
     }
 
     .BottomBarContainer a {
-        margin: 10px 0;
+        margin: 0 10px; /* Space between links */
     }
 }
 
