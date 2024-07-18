@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Demir</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+   <div class="TopBar">
+        <div class="TopBarContainer1"></div>
+        <div class="TopBarContainer">
+            <div class="menu-bar" id="menuBar">
+                Menu   <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="menu-links" id="menuLinks">
+                <a href="https://www.linkedin.com/in/alidemir58/">
+                    <i class="fa-brands fa-linkedin-in"></i>&nbsp;&nbsp;Linkedin
+                </a>
+                <a href="https://github.com/Ali-Demir-58">
+                    <i class="fa-brands fa-github"></i>&nbsp;&nbsp;github
+                </a>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home
+                </a>
+                <a href="Blog1.html">
+                    <i class="fa-solid fa-blog"></i>&nbsp;&nbsp;Blog
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Text">
+        <h1>BLOGS</h1>
+    </div>
+
+    <div class="BlogPages">
+        <div class="BlogPagesContainer">
+            <a href="GameTech-Hackathon.html" class="card-W">
+                <img src="images/GameTechAfis.jpeg" alt="Blog 1">
+                <div class="card-text">GameTech Hackathon</div>
+            </a>
+            <a href="Innovation-Boost.html" class="card-W">
+                <img src="images/InnovationBoost2.jpeg" height="250" alt="Blog 3">
+                <div class="card-text">InnovationBoost 2024</div>
+            </a>
+            <a href="Ideathon.html" class="card-W">
+                <img src="images/Ideathon.jpeg" height="250" alt="Blog 4">
+                <div class="card-text">Ideathon</div>
+            </a>
+            <a href="Office-Tours.html" class="card-L">
+                <img src="images/OfficeTour.jpeg"  alt="Blog 5">
+                <div class="card-text">Office Tours</div>
+            </a>
+
+            <a href="IT-Team.html" class="card-W">
+                <img src="images/ITTeam.jpeg" alt="Blog 6">
+                <div class="card-text">IT Team</div>
+            </a>
+
+            <a href="IGZ.html" class="card-L">
+                <img src="images/IGZ.jpeg" alt="Blog 7">
+                <div class="card-text">IGZ</div>
+            </a>
+
+            <a href="Blog-Yetgen.html" class="card-L">
+                <img src="images/YetGen Circle.png" alt="Blog 8">
+                <div class="card-text">YETGEN</div>
+            </a>
+
+            <a href="Blog-Dance.html" class="card-L">
+                <img src="images/Dance1.jpg" alt="Blog 9">
+                <div class="card-text">Sportif Latin Dance</div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="BottomBar">
+        <div class="BottomBarContainer">
+            <a href="https://www.linkedin.com/in/alidemir58/">Linkedln</a>
+            <a href="https://github.com/Ali-Demir-58">Github</a>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    
+    <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('lightboxOverlay')) {
+                event.target.click();
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuBar = document.getElementById('menuBar');
+            var menuLinks = document.getElementById('menuLinks');
+
+            menuBar.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the click from propagating to the document
+                if (menuLinks.style.display === 'block') {
+                    menuLinks.style.display = 'none';
+                } else {
+                    menuLinks.style.display = 'block';
+                }
+            });
+
+            // Close the menu if clicking outside of it
+            document.addEventListener('click', function(event) {
+                if (!menuLinks.contains(event.target) && !menuBar.contains(event.target)) {
+                    menuLinks.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
