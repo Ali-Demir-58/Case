@@ -7,6 +7,7 @@ body {
     margin: 0; /* Remove default margin */
 }
 
+/* TopBar styles */
 .TopBar {
     background-color: #050a36;
     height: 50px;
@@ -35,12 +36,13 @@ body {
     flex-direction: column;
     background-color: #1091cc;
     position: absolute;
-    top: 50px; /* TopBar'ın yüksekliği kadar yukarıya yerleştirin */
-    right: 10px; /* Menü butonunun hemen altına hizalayın */
-    width: 200px;
+    top: 100%; /* Adjust the position to be directly below the menu bar */
+    right: 0; /* Align to the right of the menu bar */
+    width: 100%; /* Adjust the width to fit the container */
     z-index: 1;
     border-radius: 4px;
-    padding: 10px; /* Bağlantılar için biraz iç boşluk ekleyin */
+    padding: 10px; /* Add padding to links */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .menu-links a {
@@ -54,6 +56,7 @@ body {
     background-color: #2ac3b4c8;
 }
 
+/* Text and content sections */
 .Text {
     margin-top: 5%;
     color: aliceblue;
@@ -64,40 +67,14 @@ body {
     font-size: 80px;
 }
 
-.Context {
+.Context, .Context-W, .Context1 {
     margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Context img {
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto; /* Maintain aspect ratio */
-    align-items: center;
-}
-
-.Context-W {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Context-W img {
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto; /* Maintain aspect ratio */
-    align-items: center;
-}
-
-.Context1 {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Context1 img {
+.Context img, .Context-W img, .Context1 img {
     max-width: 100%; /* Ensure images don't exceed their container */
     height: auto; /* Maintain aspect ratio */
     align-items: center;
@@ -114,60 +91,44 @@ body {
     font-size: 24px;
 }
 
-/* Style the BottomBar similar to TopBar */
+/* BottomBar styles */
 .BottomBar {
     background: linear-gradient(to right, #04042e, #00004B); /* Blue and dark combination */
     bottom: 0;
     width: 100%; /* Full width */
     padding: 10px 0;
+    position: fixed; /* Stick to the bottom */
 }
 
-/* Style the BottomBarContainer to align items to the right */
 .BottomBarContainer {
     display: flex;
-    justify-content: flex-end; /* Align links to the right */
-    padding-right: 20px; /* Add some right padding */
+    justify-content: space-between; /* Align links to the right */
+    padding: 0 20px; /* Add some padding */
 }
 
-/* Style the links inside BottomBarContainer */
 .BottomBarContainer a {
     color: white; /* White text color */
     text-decoration: none; /* Remove underline */
-    margin-left: 20px; /* Space between links */
     font-size: 16px;
 }
 
-/* Add hover effect to links in BottomBar */
 .BottomBarContainer a:hover {
     color: #1a98b4; /* Underline on hover */
 }
 
-/* Responsive layout adjustments */
-@media screen and (max-width: 1024px) {
-    .Text h1 {
-        font-size: 60px;
-    }
-
-    .Context-W img {
-        width: 500px;
-    }
-}
-
+/* Responsive Design adjustments */
 @media screen and (max-width: 768px) {
-    .Text h1 {
-        font-size: 40px;
+    .TopBarContainer, .BottomBarContainer {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .Context img, .Context1 img {
-        width: 250px;
+    .menu-bar {
+        display: block;
     }
 
-    .Context-W img {
-        width: 400px;
-    }
-
-    .Text1 {
-        font-size: 20px;
+    .menu-links {
+        width: 100%;
     }
 }
 
@@ -222,7 +183,6 @@ body {
     padding: 20px;
 }
 
-/* Responsive container adjustment */
 @media screen and (max-width: 768px) {
     .container {
         width: 80%;
