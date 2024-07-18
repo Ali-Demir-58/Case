@@ -7,6 +7,7 @@ body {
     margin: 0; /* Remove default margin */
 }
 
+/* TopBar styles */
 .TopBar {
     background-color: #050a36;
     height: 50px;
@@ -37,10 +38,10 @@ body {
     position: absolute;
     top: 100%; /* Adjust the position to be directly below the menu bar */
     right: 0; /* Align to the right of the menu bar */
-    width: 100%; /* Adjust the width to fit the container */
+    width: 200px; /* Adjust the width to be smaller */
     z-index: 1;
     border-radius: 4px;
-    padding: 10px; /* Bağlantılar için biraz iç boşluk ekleyin */
+    padding: 10px; /* Add padding for links */
     box-sizing: border-box; /* Ensure padding is included in width */
 }
 
@@ -173,78 +174,27 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
-
-.col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
-}
 
-
-/* Style the BottomBar similar to TopBar */
-.BottomBar {
-    background: linear-gradient(to right, #04042e, #00004B); /* Blue and dark combination */
-    bottom: 0;
-    width: 100%; /* Full width */
-    padding: 10px 0;
-}
-
-/* Style the BottomBarContainer to align items to the right */
-.BottomBarContainer {
-    display: flex;
-    justify-content: flex-end; /* Align links to the right */
-    padding-right: 20px; /* Add some right padding */
-}
-
-/* Style the links inside BottomBarContainer */
-.BottomBarContainer a {
-    color: white; /* White text color */
-    text-decoration: none; /* Remove underline */
-    margin-left: 20px; /* Space between links */
-    font-size: 16px;
-}
-
-/* Add hover effect to links in BottomBar */
-.BottomBarContainer a:hover {
-    color: #1a98b4; /* Underline on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    /* Adjust menu and top bar for smaller screens */
     .TopBarContainer, .BottomBarContainer {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .menu-bar {
         display: block;
     }
 
     .menu-links {
-        width: 100%;
+        width: auto; /* Ensure menu-links adjust to content */
     }
-    
+
     .About {
         flex-direction: column;
         align-items: center;
@@ -275,7 +225,8 @@ input[type=submit]:hover {
     }
 }
 
-@media (max-width: 480px) {
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
     .TopBarContainer, .BottomBarContainer {
         padding: 0 10px;
     }
